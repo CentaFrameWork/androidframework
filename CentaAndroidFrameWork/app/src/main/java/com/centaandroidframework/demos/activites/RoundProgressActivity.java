@@ -1,11 +1,18 @@
-package com.centaandroidframework.demos;
+package com.centaandroidframework.demos.activites;
 
 import android.os.Handler;
 import android.view.View;
+import android.widget.Toast;
 
 import com.centaandroidframework.R;
+import com.centaandroidframework.models.respmodels.RespCityModel;
+import com.centaandroidframework.network.RequestFirstApiPresenter;
 import com.centaline.corelib.base.AbsActivity;
+import com.centaline.corelib.utils.YLog;
 import com.centaline.corelib.widgets.RoundProgressBar;
+import com.google.gson.Gson;
+
+import rx.Subscriber;
 
 /**
  * @author yanwenqiang
@@ -44,6 +51,24 @@ public class RoundProgressActivity extends AbsActivity {
 
     public void click(View v){
         startProgressBar();
+
+        RequestFirstApiPresenter.getCity("北京", new Subscriber<RespCityModel>() {
+            @Override
+            public void onCompleted() {
+                Toast.makeText(RoundProgressActivity.this, "请求完成", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Toast.makeText(RoundProgressActivity.this, "错误", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNext(RespCityModel resCityModel) {
+                String json = new Gson().toJson(resCityModel);
+                YLog.json("数据返回", json);
+            }
+        });
     }
 
     private void startProgressBar() {

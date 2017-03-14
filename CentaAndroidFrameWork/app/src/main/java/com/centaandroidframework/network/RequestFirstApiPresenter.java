@@ -11,7 +11,7 @@ import rx.schedulers.Schedulers;
  * @Date 17/1/3
  * @description 请求交互者
  */
-public class RequestPresenter {
+public class RequestFirstApiPresenter {
 
     public static void getName(String name, Subscriber<String> subscriber) {
         RequestManager.getFirstApi().getName(name)

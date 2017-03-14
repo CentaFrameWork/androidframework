@@ -1,14 +1,11 @@
 package com.centaandroidframework;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.centaandroidframework.demos.RoundProgressActivity;
+import com.centaandroidframework.demos.activites.RoundProgressActivity;
 import com.centaline.corelib.base.AbsActivity;
-import com.centaline.corelib.widgets.RoundProgressBar;
 
 public class MainActivity extends AbsActivity {
 
