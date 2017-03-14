@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">corelib</string>
+    <string name="network_unable">网络不可用</string>
+</resources>
