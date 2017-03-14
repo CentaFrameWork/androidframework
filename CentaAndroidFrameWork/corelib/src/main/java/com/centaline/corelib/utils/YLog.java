@@ -1,4 +1,4 @@
-package com.centaline.corelib;
+package com.centaline.corelib.utils;
 
 import android.util.Log;
 
