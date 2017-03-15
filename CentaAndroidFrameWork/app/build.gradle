@@ -1,5 +1,14 @@
 apply plugin: 'com.android.application'
 
+
+// 热修复  start
+repositories {
+    maven {
+        url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories"
+    }
+}
+// 热修复  end
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
@@ -8,7 +17,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName '1.0.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -17,14 +26,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
+    // 热修复 start
+    compile 'com.taobao.android:alisdk-hotfix:1.4.0'
+    // 强制关闭重复依赖utdid这个SDK
+    //    compile ('com.taobao.android:alisdk-hotfix:1.4.0') {
+    //        transitive = false
+    //    }
+    // 热修复 end
     testCompile 'junit:junit:4.12'
     compile project(path: ':corelib')
 }

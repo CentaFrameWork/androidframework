@@ -3,7 +3,7 @@ package com.centaandroidframework.demos;
 /**
  * @author yanwenqiang
  * @Date 17/3/14
- * @description 待描述
+ * @description 冗余文件，为保持项目结构
  */
 public class ss {
 }

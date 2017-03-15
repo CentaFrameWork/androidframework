@@ -60,7 +60,7 @@ public class RoundProgressActivity extends AbsActivity {
 
             @Override
             public void onError(Throwable e) {
-                Toast.makeText(RoundProgressActivity.this, "错误", Toast.LENGTH_LONG).show();
+                Toast.makeText(RoundProgressActivity.this, " 错误 =_= ", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -98,7 +98,7 @@ public class RoundProgressActivity extends AbsActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                toast("Done ! ");
+                                toast("完成 Done ! ");
                             }
                         });
                     }
