@@ -11,6 +11,7 @@ public class MainActivity extends AbsActivity {
 
     private Button btn_start;
 
+
     @Override
     protected int layoutResId() {
         return R.layout.activity_main;
