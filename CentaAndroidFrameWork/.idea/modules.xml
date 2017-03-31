@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/CentaAndroidFrameWork.iml" filepath="$PROJECT_DIR$/CentaAndroidFrameWork.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/corelib/corelib.iml" filepath="$PROJECT_DIR$/corelib/corelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjavaretrofit/rxjavaretrofit.iml" filepath="$PROJECT_DIR$/rxjavaretrofit/rxjavaretrofit.iml" />
     </modules>
   </component>
 </project>
